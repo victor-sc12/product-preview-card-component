@@ -1,0 +1,110 @@
+:root {
+    box-sizing: border-box;
+    height: 100vh;
+
+    /* Font custom properties */
+    --fs-heading: clamp(1.25rem, 0.8rem + 3vw, 3rem);
+    --fs-paragraph: clamp(0.8rem, 0.8rem + 1vw, 1.3125rem);
+
+    /* Bg colors, custom properties */
+    --bg-green-500: hsl(158, 36%, 37%);
+    --bg-green-700: hsl(158, 42%, 18%);
+
+    --bg-black: hsl(212, 21%, 14%);
+    --bg-grey: hsl(228, 12%, 48%);
+    --bg-cream: hsl(30, 38%, 92%);
+    --bg-white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--bg-cream);
+
+    margin: 0;
+    height: 100%;
+    align-content: center;
+
+    /* Font rules */
+    color: var(--bg-grey);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.perfume-card {
+    border: black solid .2em;
+    background-color: var(--bg-white);
+    
+    font-size: var(--fs-paragraph);
+
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.perfume-card__img {
+    max-width: 100%;
+}
+
+.perfume-card__text-content {
+    padding: 1.125em;
+}
+
+.perfume-card__category {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.perfume-card__title {
+    font-size: var(--fs-heading);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.perfume-card__paragraph--price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.perfume-card__price--offer {
+    color: var(--bg-green-500);
+    font-size: var(--fs-heading);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+
+    margin-right: .5em;
+}
+
+.perfume-card__price--original {
+    text-decoration: line-through;
+}
+
+.perfume-card__link {
+    text-decoration: none;
+    color: var(--bg-white);
+}
+
+.perfume-card__btn-container {
+    text-align: center;
+    padding: 1em 0;
+    background-color: var(--bg-green-500);
+
+    &:hover {
+        background-color: var(--bg-green-700);
+    }
+}
+
+.attribution {
+    font-size: 11px; 
+    width: 90%;
+    margin: .5em auto 0 auto;
+    text-align: center;
+}
+
+.attribution__link {
+    color: hsl(228, 45%, 44%);
+}
