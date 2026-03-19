@@ -3,8 +3,8 @@
     height: 100vh;
 
     /* Font custom properties */
-    --fs-heading: clamp(1.25rem, 0.8rem + 3vw, 3rem);
-    --fs-paragraph: clamp(0.8rem, 0.8rem + 1vw, 1.3125rem);
+    --fs-heading: clamp(1.25rem, 0.8rem + 4vw, 2.125rem);
+    --fs-paragraph: clamp(0.8rem, 0.8rem + 1vw, 1rem);
 
     /* Bg colors, custom properties */
     --bg-green-500: hsl(158, 36%, 37%);
@@ -14,6 +14,9 @@
     --bg-grey: hsl(228, 12%, 48%);
     --bg-cream: hsl(30, 38%, 92%);
     --bg-white: hsl(0, 0%, 100%);
+
+    /* Other custom properties */
+    --border-radius-main-size: .5em;
 }
 
 *, *::before, *::after {
@@ -36,21 +39,47 @@ body {
 }
 
 .perfume-card {
-    border: black solid .2em;
+    /* border: black solid .2em; */
     background-color: var(--bg-white);
-    
-    font-size: var(--fs-paragraph);
 
-    max-width: 90%;
+    width: 90%;
+    max-width: 37.5em;
     margin: 0 auto;
+    border-radius: var(--border-radius-main-size);
+
+    @media (min-width: 35.5em) {
+        display: flex;
+    }
+}
+
+.perfume-card__picture {
+    border-radius: inherit;
+    
+    @media (min-width: 35.5em) {
+        width: 50%;
+    }
 }
 
 .perfume-card__img {
     max-width: 100%;
+    height: 100%;
+    border-top-left-radius: var(--border-radius-main-size);
+    border-top-right-radius: var(--border-radius-main-size);
+    /* border: .1em solid black; */
+
+    @media (min-width: 35.5em) {
+        border-top-right-radius: initial;
+        border-bottom-left-radius: var(--border-radius-main-size);
+    }
 }
 
 .perfume-card__text-content {
-    padding: 1.125em;
+    font-size: var(--fs-paragraph);
+    padding: 2em;
+
+    @media (min-width: 35.5em) {
+        width: 50%;
+    }
 }
 
 .perfume-card__category {
@@ -62,6 +91,7 @@ body {
     font-size: var(--fs-heading);
     font-family: "Fraunces", serif;
     font-weight: 700;
+    color: var(--bg-black);
 }
 
 .perfume-card__paragraph--price {
@@ -90,12 +120,18 @@ body {
 
 .perfume-card__btn-container {
     text-align: center;
+
     padding: 1em 0;
     background-color: var(--bg-green-500);
+    border-radius: var(--border-radius-main-size);
 
     &:hover {
         background-color: var(--bg-green-700);
     }
+}
+
+.perfume-card__link--btn {
+    padding-left: .3em;
 }
 
 .attribution {
@@ -106,5 +142,5 @@ body {
 }
 
 .attribution__link {
-    color: hsl(228, 45%, 44%);
+    color: var(--bg-green-500);
 }
