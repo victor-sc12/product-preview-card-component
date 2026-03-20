@@ -15,33 +15,35 @@
 </head>
 <body>
 
-  <article class="perfume-card">
-    <picture class="perfume-card__picture">
-      <source srcset="images/image-product-desktop.jpg" media="(min-width: 35.5em)">
-      <img src="images/image-product-mobile.jpg" alt="Gabrielle Essence Parfum" class="perfume-card__img">
-    </picture>
-    <div class="perfume-card__text-content">
-      <header class="perfume-card__header">
-        <span class="perfume-card__category">Perfume</span>
-        <h1 class="perfume-card__title">Gabrielle Essence Eau De Parfum</h1>
-      </header>
-      <p class="perfume-card__paragraph perfume-card__paragraph--description">
-        A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <p class="perfume-card__paragraph perfume-card__paragraph--price">
-        <span class="perfume-card__price perfume-card__price--offer">$149.99</span>
-        <span class="perfume-card__price perfume-card__price--original">$169.99</span>
-      </p>
-      <div class="perfume-card__btn-container">
-        <img src="images/icon-cart.svg" alt="Cart Icon" class="perfume-card__icon perfume-card__icon--cart">
-        <a href="#" class="perfume-card__link perfume-card__link--btn">Add to Cart</a>
+  <main>
+    <article class="perfume-card">
+      <picture class="perfume-card__picture">
+        <source srcset="images/image-product-desktop.jpg" media="(min-width: 35.5em)">
+        <img src="images/image-product-mobile.jpg" alt="Gabrielle Essence Parfum" class="perfume-card__img">
+      </picture>
+      <div class="perfume-card__text-content">
+        <header class="perfume-card__header">
+          <span class="perfume-card__category">Perfume</span>
+          <h1 class="perfume-card__title">Gabrielle Essence Eau De Parfum</h1>
+        </header>
+        <p class="perfume-card__paragraph perfume-card__paragraph--description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p class="perfume-card__paragraph perfume-card__paragraph--price">
+          <ins class="perfume-card__price perfume-card__price--offer">$149.99</ins>
+          <del class="perfume-card__price perfume-card__price--original">$169.99</del>
+        </p>
+        <a href="#" class="perfume-card__link perfume-card__link--btn" aria-label="Add this perfume to your cart">
+          <img src="images/icon-cart.svg" alt="" class="perfume-card__icon perfume-card__icon--cart">
+          <span class="small-padding-custom">Add to Cart</span>
+        </a>
       </div>
-    </div>
-  </article>
+    </article>
+  </main>
   
   <aside class="attribution">
-    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__link">Frontend Mentor</a>.</span> 
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__link" rel="noopener noreferrer" aria-label="Frontendmentor page (open in a new Tab)">Frontend Mentor</a>.</span> 
     <span>Coded by <a href="#" class="attribution__link">Víctor Suquilanda</a>.</span>
   </aside>
 </body>
