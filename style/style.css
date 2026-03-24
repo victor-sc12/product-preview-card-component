@@ -27,7 +27,11 @@ body {
 
     margin: 0;
     min-height: 100dvh;
-    align-content: center;
+
+    /* Flex layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     /* Font rules */
     color: var(--bg-grey);
@@ -125,7 +129,15 @@ body {
     background-color: var(--bg-green-500);
     border-radius: var(--border-radius-main-size);
 }
-.perfume-card__link--btn:hover {
+
+.perfume-card__link--btn:hover,
+.perfume-card__link--btn:focus-visible { 
+    /* Addition of a focus state to improve accessibility */
+    background-color: var(--bg-green-700);
+}
+
+.perfume-card__link--btn:focus {
+    /* Fallback in case ‘focus-visible’ is not supported */
     background-color: var(--bg-green-700);
 }
 
@@ -134,9 +146,9 @@ body {
 }
 
 .attribution {
-    font-size: 11px; 
+    font-size: .6875rem; 
     width: 90%;
-    margin: .5em auto 0 auto;
+    margin: .6em auto 0 auto;
     text-align: center;
 }
 
